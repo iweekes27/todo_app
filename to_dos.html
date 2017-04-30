@@ -3,27 +3,37 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" type="text/css" >
     <title>Study Buddy</title>
-<style>
-    h1 {
-        color:red;
-        background-color:#fafafa;
-        border-bottom:2px solid black;
-        padding:25px;
-        margin:0;
-    }
-    .block{
-        display:block;
-    }
-    body{
-        margin:0;
-    }
-   
-</style>
+    <style>
+        h1 {
+            color:red;
+            background-color:#fafafa;
+            border-bottom:2px solid black;
+            padding:25px;
+            margin:0;
+        }
+        .block{
+            display:block;
+        }
+        body{
+            margin:0;
+            background-color:orange;
+        }
+       #magic{
+           display:none;
+           position:relative;
+           right:0;
+           top:0;
+           
+       }
+      
+       
+    </style>
 
 </head>
 <body>
     <h1>StudyB<img height="50" src="https://image.shutterstock.com/z/stock-photo-pencil-d-font-letter-u-191270777.jpg">ddy</h1>
-    
+    <div>
+    <h2> Your ToDos</h2>
     <ol>
         <li class="duck"> <strong>Do Math HW</strong></li>
         <li>Shower</li>
@@ -31,6 +41,34 @@
         <li> Set Alarm</li>
         <li> Go To Bed</li>
     </ol>
-<a href="new_todo.html">add todo</a>
+    <button id="newtodobutton">
+        new todo
+    </button>
+    <div id="magic">
+        <form id="newtodoform">
+            <input class="block nameform" type="text" name="Name" placeholder="Name"/>
+            <input class="block descform" type="text" name="Description" placeholder="Description"/>
+            <input class="block priorform" type="text" name="Priority" Placeholder="Priority 1-5"/>
+            <a href="to_dos.html">cancel</a>
+        </form>   
+    </div>
+    </div>
+    <script>
+        var isShowing=false;
+        document.addEventListener("click",function(e){
+            if(e.target.id==="newtodobutton"){
+                isShowing=!isShowing
+                if(isShowing){
+                    document.getElementById("magic").style.display="block"
+                } else {
+                    document.getElementById("magic").style.display="none"
+                }
+                
+            }
+            
+        })
+    </script>
+
+
 </body>
-</html>
+</html
